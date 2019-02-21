@@ -1,0 +1,1 @@
+# tslint-line-before-constructor
