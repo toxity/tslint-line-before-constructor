@@ -1,0 +1,31 @@
+{
+  "name": "tslint-line-before-constructor",
+  "description": "Custom rule for TSLint to assure that constructor has blank line before declaration",
+  "version": "0.5.0",
+  "author": "Ivan Minich (minich.job@gmail.com)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toxity/tslint-line-before-constructor.git"
+  },
+  "keywords": [
+    "tslint",
+    "custom-tslint-rule"
+  ],
+  "devDependencies": {
+    "@types/node": "^7.0.12",
+    "tslint": "^5.9.1",
+    "typescript": "^3.0.1"
+  },
+  "main": "index.js",
+  "peerDependencies": {
+    "tslint": "^5.11.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build",
+    "test": "npm run test_valid && npm run test_invalid",
+    "test_valid": "$(npm bin)/tslint -c test/tslint.json test/valid.ts",
+    "test_invalid": "$(npm bin)/tslint -c test/tslint.json test/invalid.ts && exit 1 || exit 0"
+  }
+}
