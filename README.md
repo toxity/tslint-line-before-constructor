@@ -13,11 +13,30 @@ npm install --save-dev tslint-line-before-constructor
 Update `tslint.json` file and add new rules directory with new rule itself
 ```json
 {
-  "rulesDirectory": [
-    "node_modules/tslint-line-before-constructor"
-  ],
-  "rules": {
-    "tslint-line-before-constructor": true
-  }
+    "rulesDirectory": [
+      "tslint-line-before-constructor"
+    ],
+    "rules": {
+      "tslint-line-before-constructor": true
+    }
 }
 ```
+
+## Example
+```javascript
+// Bad
+class Name {
+    constructor() {}
+}
+
+// Good
+class Name {
+    
+    constructor() {}
+    
+    public method(): void { }
+   
+    ...
+}
+```
+
