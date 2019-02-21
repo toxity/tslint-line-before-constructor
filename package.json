@@ -1,7 +1,7 @@
 {
   "name": "tslint-line-before-constructor",
   "description": "Custom rule for TSLint to assure that constructor has blank line before declaration",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "author": "Ivan Minich (minich.job@gmail.com)",
   "license": "ISC",
   "repository": {
